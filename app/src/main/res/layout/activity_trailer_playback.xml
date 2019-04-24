@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.serhatsurguvec.swipablelayout.SwipeableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/swipableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        tools:context=".TrailerPlaybackActivity"
+>
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                android:id="@+id/exoplayer_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:resize_mode="fit"
+                app:controller_layout_id="@layout/exo_playback_control_view_custom"/>
+
+        <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+</com.serhatsurguvec.swipablelayout.SwipeableLayout>

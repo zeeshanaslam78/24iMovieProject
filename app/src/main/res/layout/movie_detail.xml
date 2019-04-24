@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MovieDetailFragment">
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="32dp">
+
+
+
+        <ImageView
+                android:id="@+id/md_img_poster"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:contentDescription="@string/image_description"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageButton
+                android:id="@+id/md_img_play_trailer"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:visibility="gone"
+                android:background="@color/colorPrimary"
+                android:src="@drawable/exo_controls_play"
+                app:layout_constraintLeft_toLeftOf="@+id/md_img_poster"
+                app:layout_constraintRight_toRightOf="@+id/md_img_poster"
+                app:layout_constraintTop_toTopOf="@+id/md_img_poster"
+                app:layout_constraintBottom_toBottomOf="@+id/md_img_poster"
+                android:contentDescription="@string/image_description"/>
+
+        <TextView
+                android:id="@+id/md_tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="The Good The Bad The Ugly"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/md_img_poster"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/md_tv_language"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+        />
+
+        <TextView
+                android:id="@+id/md_tv_language"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/md_tv_title"
+                tools:text="English"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/ic_language_grey_500_24dp"
+                android:drawableLeft="@drawable/ic_language_grey_500_24dp"
+                android:drawablePadding="8dp"
+                android:visibility="invisible"
+        />
+
+        <TextView
+                android:id="@+id/md_tv_genre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Action | Adventure | Thriller"
+                android:textColor="@color/grey"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/md_tv_title"
+                app:layout_constraintStart_toStartOf="@+id/md_tv_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"/>
+
+        <TextView
+                android:id="@+id/md_tv_release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/ic_date_range_grey_500_24dp"
+                android:drawableLeft="@drawable/ic_date_range_grey_500_24dp"
+                app:layout_constraintTop_toBottomOf="@+id/md_tv_genre"
+                app:layout_constraintStart_toStartOf="@+id/md_tv_title"
+                android:drawablePadding="8dp"
+                android:layout_marginTop="16dp"
+                android:visibility="invisible"
+        />
+        <TextView
+                android:id="@+id/md_rv_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textColor="@color/grey"
+                android:drawableLeft="@drawable/ic_timer_grey_500_24dp"
+                android:drawableStart="@drawable/ic_timer_grey_500_24dp"
+                android:drawablePadding="8dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@+id/md_tv_genre"
+                app:layout_constraintStart_toEndOf="@+id/md_tv_release_date"
+
+        />
+        <RatingBar
+                android:id="@+id/md_rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/ratingBarStyleSmall"
+                app:layout_constraintTop_toTopOf="@+id/md_rv_duration"
+                app:layout_constraintBottom_toBottomOf="@+id/md_rv_duration"
+                app:layout_constraintStart_toEndOf="@+id/md_rv_duration"
+                android:visibility="invisible"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"/>
+
+        <TextView
+                android:id="@+id/md_tv_overview_heading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                app:layout_constraintTop_toBottomOf="@+id/md_rating_bar"
+                app:layout_constraintStart_toStartOf="@+id/md_tv_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"/>
+
+        <TextView
+                android:id="@+id/md_tv_tag_line"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Ugly truth, sweet lies."
+                android:textColor="@color/grey_tag_line"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/md_tv_overview_heading"
+                app:layout_constraintStart_toStartOf="@+id/md_tv_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"/>
+
+        <TextView
+                android:id="@+id/md_tv_overview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_overview"
+                android:layout_marginTop="8dp"
+                tools:text="A married couple are faced with a difficult decision - to improve the life of their child by moving to another country or to stay in Iran and look after a deteriorating parent who has Alzheimer's disease."
+                app:layout_constraintTop_toBottomOf="@+id/md_tv_tag_line"
+                app:layout_constraintStart_toStartOf="@+id/md_tv_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"/>
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/fl_movie_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+>
+
+    <ImageView
+            android:id="@+id/movie_poster"
+            android:layout_width="@dimen/poster_width"
+            android:layout_height="225dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/image_description"/>
+
+    <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:layout_gravity="bottom|start"
+            android:layout_alignStart="@+id/movie_poster"
+            android:layout_alignLeft="@+id/movie_poster"
+            android:layout_alignRight="@+id/movie_poster"
+            android:layout_alignEnd="@+id/movie_poster"
+            android:layout_alignBottom="@+id/movie_poster"
+            android:background="@color/black_50_transparent">
+        <TextView
+                android:id="@+id/movie_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_gravity="top"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                tools:text="Title The Movie Title The Movie Title "
+                android:textAppearance="?attr/textAppearanceListItem"/>
+    </FrameLayout>
+</RelativeLayout>
+

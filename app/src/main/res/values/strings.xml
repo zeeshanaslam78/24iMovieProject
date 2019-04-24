@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">24iMovieProject</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="image_description" />
+    <string name="mins">%s mins</string>
+    <string name="overview">Overview</string>
+
+    <string name="button_close_description">Button Close</string>
+    <string name="ok">Ok</string>
+    <string name="start_date">Start Date:</string>
+    <string name="end_date">End Date:</string>
+    <string name="select_date_range">Select Date Range</string>
+    <string name="yyyy_mm_dd">yyyy-mm-dd</string>
+    <string name="choose_start_date_and_end_date_up_to_14_days_to_get_movies">Choose start date and end date up to 14
+        days to get movies
+    </string>
+</resources>
